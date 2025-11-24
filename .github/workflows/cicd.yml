@@ -49,8 +49,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Unit Test cases
-      run: mvn 
+    - name: Unit Test Cases
+      run: mvn test
       
   build_project_and_sonar_scan:
     runs-on: self-hosted
