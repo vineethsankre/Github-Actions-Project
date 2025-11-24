@@ -2,10 +2,7 @@ name: CICD pipeline
 
 on:
   push:
-    branches: [ "main" ]
-  pull-request: 
-      branches: [ "main" ]
-    
+    branches: [ "main" ]    
 jobs:
   compile:
 
@@ -20,5 +17,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn compile
 
